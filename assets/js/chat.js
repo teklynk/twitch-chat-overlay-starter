@@ -106,6 +106,7 @@ function handleChat(channel, user, message, self) {
         chatMessage = document.createElement('span');
 
     let color = useColor ? user.color : 'inherit';
+
     if (color === null) {
         if (!randomColorsChosen.hasOwnProperty(chan)) {
             randomColorsChosen[chan] = {};
@@ -134,7 +135,6 @@ function handleChat(channel, user, message, self) {
 
     chatMessage.className = 'chat-message';
 
-    chatMessage.style.color = color;
     chatMessage.innerHTML = formatEmotes(message, user.emotes);
 
     if (client.opts.channels.length > 1) chatLine.appendChild(chatChannel);

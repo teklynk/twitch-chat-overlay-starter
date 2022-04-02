@@ -29,16 +29,12 @@ body {
     font-weight: 400;
 }
 
-.chat-line:not(.chat-action) .chat-message {
-    color: inherit !important;
-}
-
 .emoticon {
     background-position: center center;
     background-repeat: no-repeat;
     margin: -5px 0;
     display: inline-block;
-    vertical-align: middle !important;
+    vertical-align: middle;
     height: 1.5em;
 }
 
