@@ -147,6 +147,15 @@ function handleChat(channel, user, message, self) {
 
 }
 
-client.addListener('message', handleChat);
+// reloads chat with /clear is used
+function clearChat(channel) {
+    setTimeout(function () {
+        window.location.reload(true);
+    }, 1000);
+}
+
+client.addListener("message", handleChat);
+
+client.addListener('clearchat', clearChat);
 
 client.connect();
